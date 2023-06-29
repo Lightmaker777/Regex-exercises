@@ -4,7 +4,7 @@ import re
 
 dates = ["31-12-2022", "15-06-23", "02/05/2023", "2022-12-31", "01-13-2023"]
 
-pattern = r"\b\d{2}-\d{2}-\d{4}\b"
+pattern = r"^(0[1-9]|[1-2][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{4})$"
 
 for date in dates:
     if re.search(pattern, date):
